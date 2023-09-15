@@ -1,0 +1,7 @@
+{
+  "name": "AutoBT",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
