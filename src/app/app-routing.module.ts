@@ -12,12 +12,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'inicio1',
-    loadChildren: () => import('./inicio1/inicio1.module').then( m => m.Inicio1PageModule)
-  },
-  {
-    path: 'recuperarcontra',
-    loadChildren: () => import('./recuperarcontra/recuperarcontra.module').then( m => m.RecuperarcontraPageModule)
+    path: 'recuperar',
+    loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
   },
 ];
 
