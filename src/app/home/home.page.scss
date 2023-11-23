@@ -17,22 +17,27 @@
   font-size: 16px;
   line-height: 22px;
 
+  color: #8c8c8c;
+
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
 }
-.selector {
-
-background-color:#0097b2;/* Cambia el color de fondo a rojo */
+ion-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100px; 
+  height: 60px; 
 }
-
-h2{
-  text-align: center;
+.animated-element {
+  width: 100px;
+  height: 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
-
-
-

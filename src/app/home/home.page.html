@@ -1,45 +1,35 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title> Iniciar Sesión </ion-title>
-        </ion-toolbar>
-      </ion-header>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-      <h2> Iniciar Sesion </h2>
-      <ion-list>
-        <ion-item>
-          <ion-input labelPlacement="floating" value="Thais">
-            <div slot="label">Nombre de Usuario <ion-text color="danger"></ion-text></div>
-          </ion-input>
-        </ion-item>
-      </ion-list>
-      <ion-list>
-        <ion-item>
-          <ion-input labelPlacement="floating" value="Password">
-            <div slot="label">Contraseña <ion-text color="danger"></ion-text></div>
-          </ion-input>
-        </ion-item>
-      </ion-list>
-      <br>
-      <br>
-      <ion-toggle style="text-indent: 15px;">
-        <span style="display:#0097b2;">Recuerdame</span>
-      </ion-toggle>
-      <br>
-      <br>
-      <ion-button expand="block" [routerLink]="['/recuperar']">Recuperar Contraseña</ion-button>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <ion-header [translucent]="true">
+    <ion-content>
 
+    </ion-content>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-content>
+          
+        </ion-content>
+      </ion-toolbar>
+    </ion-header>
+  
+    <div id="container">
+      <strong>Bienvenido</strong>
+      <div #avatar class="animated-element">
+        <ion-img src="../../assets/auto.jpg"> </ion-img>
+      </div>
+      <p>{{nombreUsuario}} <a target="_blank" rel="noopener noreferrer" href=></a></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+      <ion-button [routerLink]="['/iniciarseccion']" color="medium">Inicia tu viaje</ion-button>
+
+    </div>
+
+
+
+  </ion-content>
+  

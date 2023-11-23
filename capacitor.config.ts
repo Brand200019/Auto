@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'myapp',
+  appName: 'Brand',
   webDir: 'www',
   server: {
     androidScheme: 'https'

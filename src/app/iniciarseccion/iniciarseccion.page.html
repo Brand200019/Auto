@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Iniciar Sesión
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Iniciar Sesión</h2>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nombre de Usuario</ion-label>
+      <ion-input [(ngModel)]="forminiciarsesion.usuario" name="usuario" type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="forminiciarsesion.contrasenna" name="contrasenna" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-toggle style="text-indent: 15px;">
+    <span>Recuérdame</span>
+  </ion-toggle>
+
+  <ion-button (click)="valida(forminiciarsesion.usuario, forminiciarsesion.contrasenna)" expand="full">Iniciar Sesión<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></ion-button>
+  <ion-button (click)="guarda(forminiciarsesion.usuario, forminiciarsesion.contrasenna)" expand="full">Crear Usuario</ion-button>
+  <ion-button [routerLink]="['/recuperarcontra']" expand="full">Recuperar Contraseña</ion-button>
+</ion-content>
