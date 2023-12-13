@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label>Correo</ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>contraseña</ion-label>
+    <ion-input type="text" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <ion-list>
+  <ion-item>
+    <ion-select label="Que tipo de usuario eres?" placeholder="Tipo de usuario" [(ngModel)]="opcional" name="tipoUsuario">
+      <ion-select-option value="Conductor">Conductor</ion-select-option>
+      <ion-select-option value="Pasajero">Pasajero</ion-select-option>
+    </ion-select>
+  </ion-item>
+  </ion-list>
+  <ion-item-divider>
+    <ion-button size="large" (click)="onRegister()">Registrar</ion-button>
+    <ion-button size="large" routerLink="/">Ya tengo una cuenta</ion-button>
+
+
+  </ion-item-divider>
+</ion-content>

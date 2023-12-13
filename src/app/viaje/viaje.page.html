@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Viaje</ion-title>
+  </ion-toolbar>
+  <ion-button (click)="volver()">volver</ion-button>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ng-container *ngFor="let viajeItem of viaje">
+    <ion-card class="viajes" *ngIf="!viajeItem.lista || viajeItem.lista.length < viajeItem.cantidad" >
+      <ion-card-header>
+        <ion-card-title>{{viajeItem.nombre}}</ion-card-title>
+        <ion-card-subtitle>{{viajeItem.cantidad}}</ion-card-subtitle>
+        <ion-card-subtitle>{{viajeItem.precio}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content >
+        <p>Conductor: {{viajeItem.correo}}</p>
+        <p>Pasajeros: {{viajeItem.lista ? viajeItem.lista.join(', ') : 'Ninguno'}}</p>
+        <p>ID: {{viajeItem.id}}</p>
+        <ion-button (click)="onClickAgregarCorreos(viajeItem)">Reservar</ion-button>
+      </ion-card-content>
+      <ion-label *ngIf="viajeItem.lista && viajeItem.lista.length > viajeItem.cantidad">
+        <p>La cantidad de correos en la lista excede el límite permitido.</p>
+      </ion-label>
+    </ion-card>
+  </ng-container>
+</ion-content>

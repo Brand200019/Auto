@@ -1,0 +1,7 @@
+{
+  "name": "Brand",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

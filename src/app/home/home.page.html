@@ -1,0 +1,41 @@
+  <ion-header [translucent]="true">
+    <ion-content>
+
+    </ion-content>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-content>
+          
+        </ion-content>
+      </ion-toolbar>
+    </ion-header>
+  
+    <div id="container" *ngFor="let Tipo of tipo">
+      <strong>Bienvenido</strong>
+      <div #avatar class="animated-element">
+        <ion-img src="./auto2.png"> </ion-img>
+      </div>
+      <p>{{nombreUsuario}} {{Tipo.tipo_pasajero}} <a target="_blank" rel="noopener noreferrer" href=></a></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> <ng-container *ngIf="Tipo.tipo_pasajero == 'Pasajero'">
+  <ion-button (click)="irViajar()">Tomar viaje</ion-button>
+</ng-container>
+
+<ng-container *ngIf="Tipo.tipo_pasajero == 'Conductor'">
+  <ion-button (click)="irMap()" color="medium">Inicia tu viaje</ion-button>
+</ng-container>
+      <ion-button (click)="onLogout()" color="medium">Salir</ion-button>
+
+    </div>
+
+
+
+  </ion-content>
+  

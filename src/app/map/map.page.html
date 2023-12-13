@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>map</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- map.page.html -->
+    <div id='map-container'></div>
+
+    <ion-content>
+      <ion-button (click)="eliminar()"> borrar llegada</ion-button>
+    </ion-content>
+    <ion-item>
+      <ion-input label="Nombre del viaje" placeholder="coloca un nombre a tu viaje"[(ngModel)]="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Precio del viaje" type="number" placeholder="000"[(ngModel)]="precio"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="cantidad de personas" type="number" placeholder="000"[(ngModel)]="cantidad"></ion-input>
+    </ion-item>
+    <ion-content>
+        <ion-button (click)="viajeadd()">
+          Agregar
+        </ion-button>
+        <ion-button (click)="volver()"> volver</ion-button>
+    </ion-content>
+</ion-content>
